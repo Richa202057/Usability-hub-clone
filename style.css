@@ -1,0 +1,575 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&family=Poppins:wght@400;500;&family=Roboto:wght@400;&display=swap');
+
+:root{
+    --primary-text-color:#183b56;
+    --secondary-text-color:#577592;
+    --accent-color:#2294ed;
+    --accent-color-dark:#1d69a3;
+    --padding-inline-section:20px;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    width: 100%;
+    height: 100VH;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.page-content{
+    width: 92%; /*92% of the whole width of web page*/
+    margin: 0 auto;
+   
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    color: var(--primary-text-color);
+}
+p{
+    font-family: 'Roboto',sans-serif;
+    color: var(--secondary-text-color);
+}
+a{
+    text-decoration: none;
+}
+.banner{
+    width: 100%;
+    height: 51px;
+    background-color:#4DADF7;
+    text-align: center; /*to make it's text-content to bring at center */
+    background-image: url(images/asset\ 32.png);
+    /* background-repeat: no-repeat; */
+    background-size: 15em; 
+}
+.banner a{
+    color: white;
+    /* border: 2px solid blue; */
+    text-decoration: none;
+    position: relative;
+    top: 1em;
+}
+.nav{
+    height: 5em;
+    margin-top: 0.6em;
+    padding: 0 2em;
+    display: flex;
+    justify-content: space-between;
+   align-items: center;
+}
+.nav-left{
+    display: flex;
+    gap: 1em;
+    justify-content: baseline;
+    align-items: center;
+}
+.nav-left img{
+    width: 10em;
+    cursor: pointer;
+}
+
+.nav-right{
+    /* border: 2px solid mediumaquamarine; */
+    display: flex;
+    gap: 2em;
+}
+.nav-right a{
+    align-self: center; /*centerinng the child element 's content in it's own container*/
+    transition: 0.2s;
+}
+.nav-right a:hover{
+    color:#2294ed ;
+}
+.nav-button-1{
+    /* height: 3.4em; */
+    /* width: 7em; */
+    padding: 1em 1.5em;
+    background-color:inherit; /*Due to this background color will be same as the background color of it's immediate parent container.*/
+    border-radius: 0.4em;
+    border: 1px solid gray;
+    transition: all 0.4s
+    
+}
+.nav-button-1:hover{
+  color:#4DADF7;
+  border: 1px solid #1d69a3;
+}
+.nav-button-2{
+    /* height: 3.4em; */
+    /* width: 10em; */
+    border-radius: 0.4em;
+    color: white;
+    font-weight: bold;
+    background-color:#4DADF7;
+    border: none;
+    transition: all 0.4s;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top:1em;
+    padding-bottom: 1em;
+}
+.nav-button-2:hover{
+    background-color: #1d69a3;
+}
+
+.hero-sec{
+    display: flex;
+    height: 429px;
+    /* border: 2px solid rgb(20, 18, 18); */
+    margin: 2em auto;
+    gap: 4em;
+}
+.hero-left{
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid maroon; */
+    padding:5.4em 0;
+    gap: 1.2em;
+}
+/* 
+.hero-right{
+border: 2px solid rgb(104, 238, 117);
+} */
+.hero-img{
+    width: 586px;
+    height: 429px;
+    /* border: 2px solid red; */
+}
+.hero-heading{
+    font-weight: 700;
+    font-size: 3em;
+}
+.hero-subheading{
+    color: var(--secondary-text-color);
+    font-weight: 300;
+}
+.hero-button{
+    text-align: center;
+    padding:1em 0;
+    width: 14em;
+}
+.small-text{
+    font-size:0.8em ;
+    width: 250px;
+    text-align: center;
+}
+
+.company{
+    height: 45px;  
+    margin-top: 4em;
+}
+.textpart{
+    font-size: 1em;
+    text-align: center;
+}
+.com-logo{
+    margin-top: 2em;
+    margin-bottom: 6em;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.com-img{
+    height: 40px; /*Since width occupied by each images in actual website is different but height of each is same 
+    so we set height of each images and not width*/
+}
+.functionality{
+    margin-top: 5em;
+    height: 700px;
+    /* border: 2px solid green; */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 1em;
+}
+.funct-blob{
+    position: absolute;/*ye image container ke hi andar hmesa rhe that's why used absolute position or is image ko container me ek perticular position pe hi hmesa rkhne ke liye yha ise absolute position diya gya hai.*/
+    z-index: -5;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 100%; /*Now it's height will be such that it's height will fill the conatiner i.e image height wil be equal to height of the container*/
+}
+.funct-card-sec{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    /* border: 2px solid red; */
+    justify-content: center;
+    /* align-items: center; */
+}
+.upper-text-fuct{
+    padding-top: 2em;
+    padding-bottom: 2em;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    gap: 0.7em;
+    justify-content: center;
+    align-items: center;
+}
+.funct-heading{
+    font-size: 2em;
+    font-weight: 700;
+}
+.funct-button{
+    height: 3.1em;
+    padding: 1em 1.3em;
+    border: 1px solid var(--accent-color-dark);
+    border-radius: 4px;
+    transition: 0.2s;
+}
+.funct-button:hover{
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+}
+.func-card{
+    display: flex;
+    /* border: 2px solid green; */
+    flex-direction: column; /*setting main axis as column*/
+    align-items: center; /*As here main axis is column, so, align items will align horizontally (cross axis is row)*/
+    gap: 0.5em;
+    width: 30%;
+}
+.card-image{
+  height: 3em; /* As width of each img is different but height is same that's why we have set the height of image*/
+  /* border: 2px solid red; */
+}
+
+.card-heading{
+    font-size: 1.4em;
+    font-weight: 550;
+}
+.card-subheading{
+    color: var(--primary-text-color);
+    font-size: 1.3em;
+    text-align: center;
+    /* border: 2px solid red; */
+}
+.feature-container{
+    margin-top: 2em;
+}
+
+.feature{
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    gap: 2.5em;
+    
+}
+.fea-left-sec{
+    width: 48%;
+    /* border: 2px solid fuchsia; */
+}
+.fea-right-sec{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding-right: 5em;
+    padding-left: 3em;
+}
+.fea-heading1{
+    font-size: 1.2em;
+    font-weight: 600;
+}
+.fea-heading2{
+    font-size: 2em;
+    font-weight: 700;
+}
+.fea-subheading{
+    font-size: 1.3em;
+    color: var(--secondary-text-color);
+}
+.testinomial{
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 2.2em;
+
+}
+.testinomial-source{
+    width: 6em;
+}
+.upper-comma{
+    z-index: -5;
+    width: 4.5em;
+    position: absolute;
+
+}
+.testinomial-discription{
+    position: relative; /*So that we can make it's immediate child element comma to absolute positioned.*/
+    margin-top: -1em;
+}
+.testinomial-discription p{
+    padding-top: 1.8em;
+    padding-left: 2em;
+    color:var(--primary-text-color);
+    padding-right: 7em;
+    font-weight: 500;
+}
+.testinomial-info{
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding-left: 2em;
+}
+.testinomial-name p{
+    font-size: 0.8em;
+}
+.testinomial-img{
+    height: 3em;
+}
+
+.feature2{
+    margin-top: 5em;
+    margin-bottom: 5em;
+    display: flex;
+}
+.platform{
+    margin-top:3em;
+    margin-bottom:3em;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+.platform-header h1{
+    font-size: 2.2em;
+}
+
+.platform-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+.platform-gallary{
+    display: flex;
+    flex-wrap: wrap;                        
+    /* border: 2px solid red; */
+    justify-content: space-between;
+    
+}
+
+.card{
+    position: relative;
+    width: 278px;
+    height: 333px;
+    /* border: 2px solid green; */
+    box-shadow: 0px 0px 5px #1f1f1f;
+    background-size: cover;
+    transition: 0.3s;
+}
+.card:hover{
+    transform: scale(1.03);
+}
+.card::after{
+    content: "";
+    background-color:#1f1f1f9a;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+}
+#card1{
+    background-image: url(images/asset\ 36.jpeg);
+   
+}
+.photo-heading{
+    color: white;
+    font-weight: 700;
+    z-index: 10;
+    position: absolute;
+    padding: 1.5em;
+    bottom: 0%;
+}
+
+#card2{
+    background-image: url(images/asset\ 37.jpeg);
+    object-fit: cover;
+}
+
+#card3{
+    background-image: url(images/asset\ 38.jpeg);
+    object-fit: cover;
+}
+
+#card4{
+    background-image: url(images/asset\ 39.jpeg);
+    object-fit: cover;
+}
+.footer{
+    display: flex;
+    justify-content: space-around;
+    background-color: #EBF2FA;
+    height: 410px;
+    width: 100%;
+    padding-top: 7em;
+    padding-right: 7em;
+    
+}
+.footer-container{
+    display: flex;
+    flex-direction: column;
+}
+.footer-heading{
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 1em;
+}
+.footer-subheadings{
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid red; */
+    gap: 5px;
+}
+.footer-image{
+    /* border: 2px solid red; */
+    position: relative;
+    
+}
+.footer-link a{
+    color: var(--secondary-text-color);
+}
+.footer-most{
+    background-color: #B9CDE4;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8em;
+}
+.fm-links{
+    display: flex;
+    /* border: 2px solid red; */
+    gap: 2em;
+}
+.fm-links a{
+    color: var(--primary-text-color);
+    transition: color 0.3s;
+}
+.fm-icons{
+    display: flex;
+    /* border: 2px solid red; */
+    gap: 2em;
+}
+.fm-image{
+    height: 15px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.fm-links a:hover{
+    color: var(--accent-color);
+}
+.fm-image:hover{
+  transform: scale(1.2);
+}
+
+.user-plan{
+    background-color: #183b54;
+    height: 645px;
+    width: 100vw;
+    margin-top: 30px;
+}
+.user-plan-content{
+   /*width is same as given by page-content as both classes are used for this box*/
+    display: flex;
+    align-items: center;
+}
+.user-plan-left{
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid red; */
+    gap: 1em;
+}
+.user-plan-left-heading{
+    color: white;
+    font-size: 1.5em;
+    /* border: 2px solid green; */
+    padding-right: 10em;
+    line-height:50px;
+    letter-spacing: 2px;
+}
+.user-plan-left-subheading{
+    color:#b9cde4;
+    font-size: 1.4em;
+    margin-bottom: 1.6em;
+}
+.discription-head-plan{
+    color: white;
+}
+.discription-contents{
+    color:#b9cde4;
+    display: flex;
+    /* border: 2px solid red; */
+    padding-left: 1em;
+    padding-right: 2em;
+    justify-content: space-between;
+    
+}
+.left-disc-content li{
+    margin-bottom: 0.6em; /*to bring gap b/w each list items of this class*/
+}
+.right-disc-content li{
+    margin-bottom: 0.6em;
+}
+
+.panel-buttons{
+    /* border: 2px solid red; */
+    display: flex;
+    gap: 0.6em;
+    align-items: center;
+}
+.panel-btn2{
+    color:white;
+    border: 1px solid var(--accent-color);
+}
+.user-plan-right{
+    /* border: 2px solid rebeccapurple; */
+    width: 50%;
+    position: relative;
+}
+.back-image{
+  height: 583px;
+  /* z-index: -10; */
+}
+.up-image{
+position: absolute;
+left: 50%;         
+top: 50%;
+transform: translate(-50%,-50%);
+/*Above 3 lines are for placing this image in the center of user-plan-right class box and 1st line is to place this img w.r.t container*/
+
+}
+.upper-text{
+    z-index: 10;
+    display: flex;
+    /* border: 2px solid gold; */
+    flex-direction: column;
+    position: absolute;
+    left: 50%;         
+    top: 50%;
+    transform: translate(-50%,-50%); 
+    /* ====> same as we done for blob image to bring at center  */
+    /*Above 4 lines are for placing this block in the center of user-plan-right class box and 1st line is to place this img w.r.t container*/
+   gap: 4px;
+    
+}
+.upper-text h3{
+    /* border: 2px solid red; */
+    color: var(--primary-text-color);
+    z-index: 10;
+}
+.upper-text-big{
+    color: var(--accent-color);
+    font-size: 2.2em;
+    padding-left: -1.1px;
+    /* border: 2px solid red; */
+    margin-top: 90px;
+}
+.upper-text h2{
+    color: #577592;
+}
